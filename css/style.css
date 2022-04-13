@@ -36,7 +36,7 @@ input[type='submit']  { /*all buttons*/
     position: fixed;
     top: 0;
     min-height: 75px;
-    background-color: aquamarine; /*#eee*/
+    background-color: rgb(228, 228, 228);
     justify-content: space-around;
     align-items: center;
 }
@@ -44,6 +44,7 @@ input[type='submit']  { /*all buttons*/
 @media (max-width: 650px) {
     #header {
         flex-direction: column;
+        padding-top: 5px;
     }
 }
 .logo {
@@ -79,21 +80,21 @@ a:hover {
     transition: color 1.2s;
 }
 
-ul {
+#nav-bar > ul {
   display: flex;
   justify-content: space-around;
   list-style: none;
 }
 
 @media (max-width: 650px) {
-    ul { 
+    #nav-bar > ul { 
        flex-direction: column;
        text-align: center;
        padding: 0;
     }
 }
 
-li {
+#nav-bar > ul > li {
     margin: 10px 0;
 }
 
@@ -102,8 +103,8 @@ li {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: 75px 0 0 0;
-    background-color: rgb(212, 193, 230);/*#eee*/
+    margin-top: 75px;
+    background-color: #eee;
     box-sizing: border-box;
 }
 
@@ -142,7 +143,7 @@ li {
 
 @media (max-width: 650px) {
     #hero { 
-        margin: 179px 0 0 0;
+        margin: 143px 0 0 0;
     }
 }
 
@@ -191,4 +192,99 @@ li {
         height: 150px;
     }
 }
-   
+
+#how-it-works {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#video {
+    max-width: 560px;
+    width: 100%;
+    height: 315px;
+}
+
+#pricing {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+.level {
+    background-color: #ddd;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.price {
+    margin-top: 15px;
+}
+
+.product> ul {
+    display: block;
+}
+
+.product > ul > li {
+    padding: 5px 0;
+}
+
+.product > .btn {
+    max-width: 150px;
+    width: 100%;
+    height: 30px;
+    margin: 15px 0;
+    border: 0;
+    background-color: #f1c40f;
+}
+
+.product > .btn:hover {
+    background-color: orange;
+    transition: background-color 1s;
+}
+
+@media (max-width: 800px) {
+    #pricing {
+      flex-direction: column;
+    }
+    .product {
+      max-width: 300px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+  }
+
+footer {
+    margin-top: 30px;
+    background-color: #ddd;
+    padding: 20px;
+}
+
+footer > ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer > ul > li {
+    padding: 0 10px;
+}
+
+footer > p {
+    text-align: end;
+    margin: 10px 0;
+}
